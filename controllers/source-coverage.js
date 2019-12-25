@@ -34,6 +34,7 @@ const deleteCoverageRecord = (req, res, db) => {
 
 const checkExistingDomainEmail = (req, res, db) => {
   const { email, domain } = req.query;
+  console.log(email, domain);
   db("source_coverage_request")
     .where({
       email,
