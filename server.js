@@ -30,5 +30,6 @@ app.post("/deleteRecord", (req, res) =>
 app.get("/checkEmailDomain", (req, res) => {
   sourceCoverage.checkExistingDomainEmail(req, res, db);
 });
+const PORT = process.env.PORT || 3000;
 
-app.listen(3001, () => console.log("server listen..."));
+app.listen(PORT, () => console.log("server listen..."));
